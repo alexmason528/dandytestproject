@@ -1,0 +1,26 @@
+version: '3.3'
+
+services:
+  nginx:
+    image: nginx:latest
+    container_name: dandy-nginx
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - .:/app
+      - ./docker/nginx:/etc/nginx/conf.d
+      - /var/www:/var/www
+    links:
+      - frontend
+
+  frontend:
+    build: .
+    command: yarn start
+    container_name: dandy-frontend
+    env_file:
+      - .env
+    volumes:
+      - .:/app
+    ports:
+      - '$FRONTEND_PORT:$FRONTEND_PORT'

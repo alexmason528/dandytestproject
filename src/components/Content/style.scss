@@ -1,0 +1,14 @@
+.content {
+  position: absolute;
+  left: 0;
+  top: 60px;
+  width: 100%;
+  height: calc(100% - 60px);
+
+  flex: 1;
+  display: flex;
+
+  & > div {
+    width: 50%;
+  }
+}

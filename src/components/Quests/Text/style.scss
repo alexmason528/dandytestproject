@@ -1,0 +1,16 @@
+@import 'styles/core.scss';
+
+.text-quest {
+  &-answer {
+    margin-top: 20px;
+    text-align: right;
+
+    div {
+      padding: 8px 15px;
+      background-color: rgb(215, 215, 215);
+      display: inline-block;
+
+      @include border-radius(30px);
+    }
+  }
+}

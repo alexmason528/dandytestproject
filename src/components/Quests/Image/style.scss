@@ -1,0 +1,26 @@
+@import 'styles/core.scss';
+
+.image-quest {
+  padding: 30px 20px 0 70px;
+
+  &-source {
+    position: relative;
+
+    &:before {
+      content: ' ';
+      position: absolute;
+      left: -40px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 30px;
+      height: 30px;
+      background-color: black;
+
+      @include border-radius(30px);
+    }
+
+    img {
+      height: 100px;
+    }
+  }
+}

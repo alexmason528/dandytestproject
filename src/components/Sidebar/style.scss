@@ -1,0 +1,34 @@
+@import 'styles/core.scss';
+
+.sidebar {
+  background-color: rgb(21, 21, 21);
+  width: 100%;
+  height: 100%;
+  color: rgb(244, 244, 244);
+
+  &-exit {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  &-nav-item {
+    position: relative;
+    padding: 6px 0;
+    cursor: pointer;
+    user-select: none;
+
+    &.active:before {
+      content: '';
+      position: absolute;
+      left: -15px;
+      top: 50%;
+      width: 8px;
+      height: 8px;
+      background-color: white;
+      transform: translateY(-50%);
+
+      @include border-radius(8px);
+    }
+  }
+}
